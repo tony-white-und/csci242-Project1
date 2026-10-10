@@ -2,6 +2,7 @@
 
 ## Executive Summary
 
+*more to come*
 ## Algorithm
 
 ### <ins>Selection Sort</ins>
@@ -94,6 +95,7 @@ $T(n) = n^2$
 <div style="page-break-after: always;"></div>
 
 ### Three Cases
+Time Complexity Key:
 > [!NOTE]
 > $1 <logn < \sqrt{n} < n < \dots < n^2 < n^3 < \dots < 2^n < 3^n < \dots < n^n$
 #### Big O
