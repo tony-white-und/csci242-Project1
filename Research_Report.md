@@ -122,10 +122,16 @@ Average Case: Unsorted List
 > The function $f(n) = \Theta(g(n)) \iff \exists$  three Constants $C_1$, $C_2$, and $k$ such that:
 >  $\quad C_1 \cdot g(n) <= f(n) <= C_2 \cdot g(n) \quad \forall n >= k$
 
-<div style="page-break-after: always;"></div>
 $C_1 \cdot g(n) <= n^2 <= C_2 \cdot g(n)$
 
 $n^2 <= n^2 <= n^2 \quad \forall n >= 1$ where $C_1 = 1, C_2 = 1$ and $g(n) = n^2$
 
-Based on the definition $n^2 = \Theta(n^2)$
+Based on the definition $n^2 = \Theta(n)$
+
+#### Three Cases Conclusion
+
+The Selection Sort Algorithm has an *exact bound* since $\Omega(n^2)$, $\Theta(n^2)$, and $O(n^2)$.  Therefore, the time complexity is *quadratic* by definition.
+
+<div style="page-break-after: always;"></div>
+
 ### Asymptotic Notations
