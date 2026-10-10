@@ -94,15 +94,18 @@ $T(n) = n^2$
 
 #### Big O
 > [!TIP]
-> The function $f(n) = O(g(n)) \iff \exists$ two Constants $C$ and $k$ such that $f(n) <= C \cdot g(n) \forall n >= k$
+> The function $f(n) = O(g(n)) \iff \exists$ two Constants $C$ and $k$ such that:
+>  $\quad f(n) <= C \cdot g(n) \quad \forall n >= k$
 
 #### Big $\Omega$ 
 > [!TIP]
-> The function $f(n) = \Omega(g(n)) \iff \exists$ two Constants $C$ and $k$ such that: $f(n) >= C \cdot g(n) \forall n >= k$
+> The function $f(n) = \Omega(g(n)) \iff \exists$ two Constants $C$ and $k$ such that:
+>  $\quad f(n) >= C \cdot g(n) \quad \forall n >= k$
 
 #### Big $\Theta$
 > [!TIP]
-The function $f(n) = \Theta(g(n)) \iff \exists$  three Constants $C_1$, $C_2$ ,and $k$ such that: $C_1 \cdot g(n) <= f(n) <= C_2 \cdot g(n) \quad \forall n >= k$
+> The function $f(n) = \Theta(g(n)) \iff \exists$  three Constants $C_1$, $C_2$ ,and $k$ such that:
+>  $\quad C_1 \cdot g(n) <= f(n) <= C_2 \cdot g(n) \quad \forall n >= k$
 
 <div style="page-break-after: always;"></div>
 
