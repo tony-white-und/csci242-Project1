@@ -3,8 +3,16 @@
 ## Executive Summary
 
 *more to come*
-## Algorithm
+## History
 
+Selection Sort is one of the oldest sorting algorithms in Computer Science.  Because of its simplicity, there is no known original author or documented first-use of the algorithm.   
+## Use Cases
+
+While not often used as a general purpose sorting algorithm in modern computing today, Selection Sort does still have its uses in both education and industry.  Due to the inherent simplicity of the algorithm, it is still widely used in Computer Science education.   While not as fast as other more modern sorting algorithms, it still has a real-world use on embedded systems that have very expensive memory storage operations.  Since elements in the list to be sorted can only ever be moved a maximum of **one time**.  
+## Comparison to Other Sorting Algorithms
+
+
+## Algorithm
 ### <ins>Selection Sort</ins>
 1.  Get a list of unsorted elements `LIST`
 2. Iterate through the list storing the current index as `CURRENT`.
@@ -135,5 +143,3 @@ Based on the definition $n^2 = \Theta(n)$
 The Selection Sort Algorithm has an *exact bound* since $\Omega(n^2)$, $\Theta(n^2)$, and $O(n^2)$.  Therefore, the time complexity is *quadratic* by definition.
 
 <div style="page-break-after: always;"></div>
-
-### Asymptotic Notations
