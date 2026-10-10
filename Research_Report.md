@@ -62,12 +62,12 @@ A --> D
 
 ### Time Function Definition
 ```c
-void function(int n[]) {
-	int tmp, lowest_idx;                    // 2
-	for (int i = 0, i < sizeof(n), i++) {   // n + 1
+void function(int n[]) {                    // T(n)
+	int i, j, tmp, lowest_idx;              // 4
+	for (i = 0, i < sizeof(n), i++) {       // n + 1
 		tmp = n[i]                          // n
 		lowest_idx = i                      // n
-		for (j = i, j < sizeof(n), j++)     // n * n + 1
+		for (j = i, j < sizeof(n), j++)     // n * (n + 1)
 			if n[j] < n[lowest_idx]         // n * n
 				lowest_idx = j              // n * n
 		l[i] = l[lowest_idx]                // n
@@ -76,34 +76,37 @@ void function(int n[]) {
 }
 ```
 
-$T(n) = 2 + (n + 1) + n + n + (n * (n + 1)) + n^2 + n^2 + n + n$
+$T(n) = 4 + (n + 1) + n + n + (n * (n + 1)) + n^2 + n^2 + n + n$
 
-$T(n) = 3n^2 + 6n + 3$
+$T(n) = 3n^2 + 6n + 5$
 
 #### Asymptotic Analysis Rule #1
+(keeping only term with highest degree)
 
 $T(n) = 3n^2$
 
 #### Asymptotic Analysis Rule #2
+(ignore constants)
 
 $T(n) = n^2$
 
 <div style="page-break-after: always;"></div>
 
 ### Three Cases
-
+> [!NOTE] Time Function Key
+> $1 <logn < \sqrt{n} < n < .\dots < n^2 < n^3 < \dots < 2^n < 3^n < \dots < n^n$
 #### Big O
-> [!TIP]
+> [!TIP] Big O Definition
 > The function $f(n) = O(g(n)) \iff \exists$ two Constants $C$ and $k$ such that:
 >  $\quad f(n) <= C \cdot g(n) \quad \forall n >= k$
 
 #### Big $\Omega$ 
-> [!TIP]
+> [!TIP] Big $\Omega$ Definition
 > The function $f(n) = \Omega(g(n)) \iff \exists$ two Constants $C$ and $k$ such that:
 >  $\quad f(n) >= C \cdot g(n) \quad \forall n >= k$
 
 #### Big $\Theta$
-> [!TIP]
+> [!TIP] Big $\Theta$ Definition
 > The function $f(n) = \Theta(g(n)) \iff \exists$  three Constants $C_1$, $C_2$ ,and $k$ such that:
 >  $\quad C_1 \cdot g(n) <= f(n) <= C_2 \cdot g(n) \quad \forall n >= k$
 
