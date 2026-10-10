@@ -8,9 +8,10 @@
 1.  Get a list of unsorted elements `LIST`
 2. Iterate through the list storing the current index as `CURRENT`.
 3. Store the value of the `CURRENT` index in `TEMP`
-4. Iterate through the remaining items storing the index of the lowest value as `LOWEST_IDX` 
+	`TEMP = LIST[CURRENT]`
+4. Iterate through the remaining items in the list to find the lowest value and store the index of that item as `LOWEST_IDX` 
 5. Move the value of the item at `LOWEST_IDX` to the item at `CURRENT` 
-     `LIST[CURRENT] = LIST[LOWEST_IDX]`
+    `LIST[CURRENT] = LIST[LOWEST_IDX]`
 6. Move the value `TEMP` to the item at `LOWEST_IDX`
     `LIST[LOWEST_IDX] = TEMP`
 
@@ -94,7 +95,7 @@ $T(n) = n^2$
 
 ### Three Cases
 > [!NOTE] Time Function Key
-> $1 <logn < \sqrt{n} < n < .\dots < n^2 < n^3 < \dots < 2^n < 3^n < \dots < n^n$
+> $1 <logn < \sqrt{n} < n < \dots < n^2 < n^3 < \dots < 2^n < 3^n < \dots < n^n$
 #### Big O
 > [!TIP] Big O Definition
 > The function $f(n) = O(g(n)) \iff \exists$ two Constants $C$ and $k$ such that:
@@ -107,7 +108,7 @@ $T(n) = n^2$
 
 #### Big $\Theta$
 > [!TIP] Big $\Theta$ Definition
-> The function $f(n) = \Theta(g(n)) \iff \exists$  three Constants $C_1$, $C_2$ ,and $k$ such that:
+> The function $f(n) = \Theta(g(n)) \iff \exists$  three Constants $C_1$, $C_2$, and $k$ such that:
 >  $\quad C_1 \cdot g(n) <= f(n) <= C_2 \cdot g(n) \quad \forall n >= k$
 
 <div style="page-break-after: always;"></div>
