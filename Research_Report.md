@@ -30,6 +30,7 @@ for CURRENT from 0 to length(LIST) do
 endfor
 return LIST
 ```
+
 ### Implementation Example (Python)
 ```python
 def selection_sort(l):
@@ -43,6 +44,9 @@ def selection_sort(l):
         l[lowest_idx] = tmp
     return l
 ```
+
+<div style="page-break-after: always;"></div>
+
 ## Asymptotic Analysis
 
 ```mermaid
@@ -58,7 +62,7 @@ A --> D
 
 ### Time Function Definition
 ```c
-voic function(int n[]) {
+void function(int n[]) {
 	int tmp, lowest_idx;                    // 2
 	for (int i = 0, i < sizeof(n), i++) {   // n + 1
 		tmp = n[i]                          // n
@@ -67,7 +71,7 @@ voic function(int n[]) {
 			if n[j] < n[lowest_idx]         // n * n
 				lowest_idx = j              // n * n
 		l[i] = l[lowest_idx]                // n
-		l[lowest_idx] = tmp	                // n
+		l[lowest_idx] = tmp                 // n
 	}
 }
 ```
@@ -83,6 +87,9 @@ $T(n) = 3n^2$
 #### Asymptotic Analysis Rule #2
 
 $T(n) = n^2$
+
+<div style="page-break-after: always;"></div>
+
 ### Three Cases
 
 #### Big O
@@ -96,5 +103,7 @@ $T(n) = n^2$
 #### Big $\Theta$
 > [!TIP]
 The function $f(n) = \Theta(g(n)) \iff \exists$  three Constants $C_1$, $C_2$ ,and $k$ such that: $C_1 \cdot g(n) <= f(n) <= C_2 \cdot g(n) \quad \forall n >= k$
+
+<div style="page-break-after: always;"></div>
 
 ### Asymptotic Notations
