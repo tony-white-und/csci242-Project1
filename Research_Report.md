@@ -97,20 +97,35 @@ $T(n) = n^2$
 > [!NOTE] Time Function Key
 > $1 <logn < \sqrt{n} < n < \dots < n^2 < n^3 < \dots < 2^n < 3^n < \dots < n^n$
 #### Big O
+Worst Case: Reverse Sorted List
 > [!TIP] Big O Definition
 > The function $f(n) = O(g(n)) \iff \exists$ two Constants $C$ and $k$ such that:
 >  $\quad f(n) <= C \cdot g(n) \quad \forall n >= k$
 
+$n^2 <= C \cdot g(n) \quad \forall n >= 1$
+$n^2 <= n^2$ where $C$ =1 and $g(n) = n^2$
+
+From the definition $n^2 = O(n^2)$
 #### Big $\Omega$ 
+Best Case: Sorted List
 > [!TIP] Big $\Omega$ Definition
 > The function $f(n) = \Omega(g(n)) \iff \exists$ two Constants $C$ and $k$ such that:
 >  $\quad f(n) >= C \cdot g(n) \quad \forall n >= k$
 
+$n^2 >= C \cdot g(n) \quad \forall n >= 1$
+$n^2 >= n^2$ where $C$ =1 and $g(n) = n^2$
+
+From the definition $n^2 = \Omega(n^2)$
 #### Big $\Theta$
+Average Case: Unsorted List
 > [!TIP] Big $\Theta$ Definition
 > The function $f(n) = \Theta(g(n)) \iff \exists$  three Constants $C_1$, $C_2$, and $k$ such that:
 >  $\quad C_1 \cdot g(n) <= f(n) <= C_2 \cdot g(n) \quad \forall n >= k$
 
 <div style="page-break-after: always;"></div>
+$C_1 \cdot g(n) <= n^2 <= C_2 \cdot g(n)$
 
+$n^2 <= n^2 <= n^2 \quad \forall n >= 1$ where $C_1 = 1, C_2 = 1$ and $g(n) = n^2$
+
+Based on the definition $n^2 = \Theta(n^2)$
 ### Asymptotic Notations
