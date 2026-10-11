@@ -90,7 +90,7 @@ A --> D
 ### Time Function Definition
 
 ```c
-void function(int n[]) {                     // T(n)
+void function(int n[]) {
     int i, j, tmp, lowest_idx;               // 4
     for (i = 0; i < sizeof(n); i++) {        // n + 1
         tmp = n[i];                          // n

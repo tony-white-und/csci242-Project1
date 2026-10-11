@@ -5,8 +5,9 @@ def selection_sort(l):
         for s in range(c, len(l)):
             if l[s] < l[lowest_idx]:
                 lowest_idx = s
-        l[c] = l[lowest_idx]
-        l[lowest_idx] = tmp
+        if lowest_idx != c:
+            l[c] = l[lowest_idx]
+            l[lowest_idx] = tmp
     return l
 
 mylist = [10, 6, 3, 20, 12, 4, 5]
