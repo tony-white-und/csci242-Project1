@@ -8,7 +8,7 @@
 Selection Sort is one of the oldest sorting algorithms in Computer Science.  Because of its simplicity, there is no known original author or documented first-use of the algorithm.   
 ## Use Cases
 
-While not often used as a general purpose sorting algorithm in modern computing today, Selection Sort does still have its uses in both education and industry.  Due to the inherent simplicity of the algorithm, it is still widely used in Computer Science education.   While not as fast as other more modern sorting algorithms in terms of time-complexity, it still has a real-world use on certain embedded systems that have very expensive memory read/write operations.  Since elements in the list to be sorted can only ever be moved a maximum of **one time** by the sorting operation.
+While not often used as a general purpose sorting algorithm in modern computing today, Selection Sort does still have its uses in both education and industry.  Due to the inherent simplicity of the algorithm, it is still widely used in Computer Science education.   While not as fast as other more modern sorting algorithms in terms of time-complexity, it still has a real-world use on certain embedded systems that have very expensive memory read/write operations.  Because the values in the list to be sorted can only ever be moved (swapped) a maximum of **one time** by the sorting operation, this gives Selection Sort an $O(n)$ time complexity it terms of swap operations.
 ## Comparison to Other Sorting Algorithms
 
 To illustrate the unique value of Selection Sort when compared to other sorting algorithms, we must look at the Worst Case Time Complexity **specifically for Swap Operations**:
@@ -88,22 +88,24 @@ A --> D
 ```
 
 ### Time Function Definition
+
 ```c
-void function(int n[]) {                    // T(n)
-	int i, j, tmp, lowest_idx;              // 4
-	for (i = 0, i < sizeof(n), i++) {       // n + 1
-		tmp = n[i];                         // n
-		lowest_idx = i;                     // n
-		for (j = i, j < sizeof(n), j++)     // n * (n + 1)
-			if (n[j] < n[lowest_idx])       // n * n
-				lowest_idx = j;             // n * n
-		if (lowest_idx != i) {              // n
-			l[i] = l[lowest_idx];           // n
-			l[lowest_idx] = tmp;            // n
-		}
-	}
+void function(int n[]) {                     // T(n)
+    int i, j, tmp, lowest_idx;               // 4
+    for (i = 0; i < sizeof(n); i++) {        // n + 1
+        tmp = n[i];                          // n
+        lowest_idx = i;                      // n
+        for (j = i; j < sizeof(n); j++)      // n * (n + 1)
+            if (n[j] < n[lowest_idx])        // n * n
+                lowest_idx = j;              // n * n
+        if (lowest_idx != i) {               // n
+            l[i] = l[lowest_idx];            // n
+            l[lowest_idx] = tmp;             // n
+        }
+    }
 }
 ```
+
 
 $T(n) = 4 + (n + 1) + n + n + (n * (n + 1)) + n^2 + n^2 + n + n + n$
 
