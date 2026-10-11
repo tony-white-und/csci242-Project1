@@ -139,6 +139,7 @@ See [Big O](#Big%20O) Below
 #### Best Case
 The best case for Time Complexity for this algorithm is when **the list is already sorted**.
 This will not require moving any elements.  However the time complexity is still $O(n^2)$ because of comparison operations.
+
 $T(n) = 4 + (n + 1) + n + n + (n * (n + 1)) + n^2 + n^2 + n$
 
 $T(n) = 3n^2 + 5n + 5$
