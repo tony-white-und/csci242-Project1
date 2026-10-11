@@ -89,7 +89,7 @@ A --> D
 
 ### Time Function Definition
 
-```c
+```cpp
 void function(int n[]) {
     int i, j, tmp, lowest_idx;               // 4
     for (i = 0; i < sizeof(n); i++) {        // n + 1
