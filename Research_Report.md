@@ -13,20 +13,20 @@ While not often used as a general purpose sorting algorithm in modern computing 
 
 To illustrate the unique value of Selection Sort when compared to other sorting algorithms, we must look at the Worst Case Time Complexity **specifically for Swap Operations**:
 
-| Sorting Algorithm     | Worst Case (Swap Operations) |
-| --------------------- | ---------------------------- |
-| Selection Sort        | $O(n)$                       |
-| Bubble Sort           | $O(n^2)$                     |
-| Recursive Bubble Sort | $O(n^2)$                     |
-| Quicksort             | $O(nlogn)$                   |
-| Insertion Sort        | $O(n^2)$                     |
-| Bucket Sort           | N/A - not an inline sort     |
-| Radix Sort            | N/A - not an inline sort     |
-| Count Sort            | N/A - not an inline sort     |
-| Heap Sort             | $O(nlogn)$                   |
-| Tree Sort             | N/A - not an inline sort     |
-| Shell Sort            | $O(n^2)$                     |
-| TimSort               | N/A - not an inline sort     |
+| Sorting Algorithm     | Worst Case (For Swap Operations) |
+| --------------------- | -------------------------------- |
+| Selection Sort        | $O(n)$                           |
+| Bubble Sort           | $O(n^2)$                         |
+| Recursive Bubble Sort | $O(n^2)$                         |
+| Quicksort             | $O(nlogn)$                       |
+| Insertion Sort        | $O(n^2)$                         |
+| Bucket Sort           | N/A - not an in-place sort       |
+| Radix Sort            | N/A - not an in-place sort       |
+| Count Sort            | N/A - not an in-place sort       |
+| Heap Sort             | $O(nlogn)$                       |
+| Tree Sort             | N/A - not an in-place sort       |
+| Shell Sort            | $O(n^2)$                         |
+| TimSort               | N/A - not an in-place sort       |
 
 ## Algorithm
 ### <ins>Selection Sort</ins>
@@ -125,8 +125,11 @@ $T(n) = n^2$
 The worst case for time complexity for this algorithm is when **the list is sorted, but in reverse order**.  This will require moving every element.  However, no matter if all the elements are moved or none of them are moved, the time complexity is $O(n^2)$ because of comparison operations.
 
 $T(n) = 4 + (n + 1) + n + n + (n * (n + 1)) + n^2 + n^2 + n + n + n$
+
 $T(n) = 3n^2 + 7n + 5$
+
 $T(n) = 3n^2$
+
 $T(n) = n^2$
 
 See [Big O](#Big%20O) Below
@@ -135,8 +138,11 @@ See [Big O](#Big%20O) Below
 The best case for Time Complexity for this algorithm is when **the list is already sorted**.
 This will not require moving any elements.  However the time complexity is still $O(n^2)$ because of comparison operations.
 $T(n) = 4 + (n + 1) + n + n + (n * (n + 1)) + n^2 + n^2 + n$
+
 $T(n) = 3n^2 + 5n + 5$
+
 $T(n) = 3n^2$
+
 $T(n) = n^2$
 
 See [Big Omega](#Big%20Omega)
@@ -144,8 +150,11 @@ See [Big Omega](#Big%20Omega)
 The average case for Time Complexity for this algorithm is when **the list is unsorted in such a way that half of items must move**.  The time complexity will always be $O(n^2)$ because of the comparison operations.
 
 $T(n) = 4 + (n + 1) + n + n + (n * (n + 1)) + n^2 + n^2 + n + \frac{n}{2} + \frac{n}{2}$
+
 $T(n) = 3n^2 + 6n + 5$
+
 $T(n) = 3n^2$
+
 $T(n) = n^2$
 
 See [Big Theta](#Big%20Theta)
