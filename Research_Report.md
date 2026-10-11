@@ -168,11 +168,11 @@ See [Big O](#Big%20O) Below
 The best case for Time Complexity for this algorithm is when **the list is already sorted**.
 This will not require moving any elements.  However the time complexity is still $O(n^2)$ because of comparison operations.
 
-$T(n) = 4 + (n + 1) + n + n + (n * (n + 1)) + n^2 + n^2 + n$
+$T(n) = 4 + (n + 1) + n + n + (n * (n + 1)) + n^2 + n$
 
-$T(n) = 3n^2 + 5n + 5$
+$T(n) = 2n^2 + 5n + 5$
 
-$T(n) = 3n^2$
+$T(n) = 2n^2$
 
 $T(n) = n^2$
 
@@ -182,11 +182,11 @@ See [Big Omega](#Big%20Omega)
 
 The average case for Time Complexity for this algorithm is when **the list is unsorted in such a way that half of items must move**.  The time complexity will always be $O(n^2)$ because of the comparison operations.
 
-$T(n) = 4 + (n + 1) + n + n + (n * (n + 1)) + n^2 + n^2 + n + \frac{n}{2} + \frac{n}{2}$
+$T(n) = 4 + (n + 1) + n + n + (n * (n + 1)) + n^2 + \frac{n^2}{2} + n + \frac{n}{2} + \frac{n}{2}$
 
-$T(n) = 3n^2 + 6n + 5$
+$T(n) = \frac{7n^2}{2} + 6n + 5$
 
-$T(n) = 3n^2$
+$T(n) = \frac{7n^2}{2}$
 
 $T(n) = n^2$
 
