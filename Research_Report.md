@@ -17,7 +17,7 @@ Selection Sort is one of the oldest sorting algorithms in Computer Science.  Bec
 
 ## Use Cases
 
-While not often used as a general purpose sorting algorithm in modern computing today, Selection Sort does still have its uses in both education and industry.  Due to the inherent simplicity of the algorithm, it is still widely used in Computer Science education.   While not as fast as other more modern sorting algorithms in terms of time-complexity, it still has a real-world use on certain embedded systems that have very expensive memory read/write operations.  Because the values in the list to be sorted can only ever be moved (swapped) a maximum of **one time** by the sorting operation, this gives Selection Sort an $O(n)$ time complexity it terms of swap operations.
+While not often used as a general purpose sorting algorithm in modern computing today, Selection Sort does still have its uses in both education and industry.  Due to the inherent simplicity of the algorithm, it is still widely used in Computer Science education.   While not as fast as other more modern sorting algorithms in terms of overall time-complexity, Selection Sort still has a real-world use on certain embedded systems that have very expensive memory write operations.  Because the values in the list will only ever be moved (swapped) a maximum of **one time** by the sorting algorithm, this gives Selection Sort an $O(n)$ time complexity it terms of swap operations.
 
 ## Comparison to Other Sorting Algorithms
 
@@ -52,13 +52,13 @@ To illustrate the unique value of Selection Sort when compared to other sorting 
 
 3. Iterate through the remaining items in the list to find the lowest value and store the index of that item as `LOWEST_IDX`
 
-4. If the current item does NOT have the lowest value of the remaining items, then swap the two values
+4. If the value stored in the current item does NOT have the lowest value of all the remaining items, then swap the two values
    
-   1. Move the value of the item at `LOWEST_IDX` to the item at `CURRENT` 
+   5. Copy the value of the item at `LOWEST_IDX` to the item at `CURRENT` 
       
        `LIST[CURRENT] = LIST[LOWEST_IDX]`
    
-   2. Move the value `TEMP` to the item at `LOWEST_IDX`
+   4. Copy the value stored in `TEMP` to the item at `LOWEST_IDX`
       
        `LIST[LOWEST_IDX] = TEMP`
 
@@ -212,7 +212,7 @@ Worst Case: Reverse Sorted List
 $n^2 <= C \cdot g(n) \quad \forall n >= 1$
 $n^2 <= n^2$ where $C$ =1 and $g(n) = n^2$
 
-From the definition $n^2 = O(n^2)$
+From the definition: $O(n^2)$
 
 #### Big Omega
 
@@ -225,7 +225,7 @@ Best Case: Sorted List
 $n^2 >= C \cdot g(n) \quad \forall n >= 1$
 $n^2 >= n^2$ where $C$ =1 and $g(n) = n^2$
 
-From the definition $n^2 = \Omega(n^2)$
+From the definition: $\Omega(n^2)$
 
 #### Big Theta
 
@@ -239,7 +239,7 @@ $C_1 \cdot g(n) <= n^2 <= C_2 \cdot g(n)$
 
 $n^2 <= n^2 <= n^2 \quad \forall n >= 1$ where $C_1 = 1, C_2 = 1$ and $g(n) = n^2$
 
-Based on the definition $n^2 = \Theta(n^2)$
+From the definition: $\Theta(n^2)$
 
 ### Conclusion
 
