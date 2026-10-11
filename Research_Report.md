@@ -170,7 +170,7 @@ $n^2 <= n^2 <= n^2 \quad \forall n >= 1$ where $C_1 = 1, C_2 = 1$ and $g(n) = n^
 
 Based on the definition $n^2 = \Theta(n)$
 
-#### Conclusion
+### Conclusion
 
 The Selection Sort Algorithm has an *exact bound* since $\Omega(n^2)$, $\Theta(n^2)$, and $O(n^2)$.  Therefore, the time complexity is **quadratic** by definition.
 
