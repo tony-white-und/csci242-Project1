@@ -30,19 +30,19 @@ To illustrate the unique value of Selection Sort when compared to other sorting 
 
 ## Algorithm
 ### <ins>Selection Sort</ins>
-1.  Get a list of unsorted elements `LIST`
-2. Iterate through the list storing the current index as `CURRENT`.
-3. Store the value of the `CURRENT` index in `TEMP`
-	`TEMP = LIST[CURRENT]`
-4. Iterate through the remaining items in the list to find the lowest value and store the index of that item as `LOWEST_IDX` 
-5. Move the value of the item at `LOWEST_IDX` to the item at `CURRENT` 
-    `LIST[CURRENT] = LIST[LOWEST_IDX]`
-6. Move the value `TEMP` to the item at `LOWEST_IDX`
-    `LIST[LOWEST_IDX] = TEMP`
+
+1. Iterate through the list `LIST` while storing the current index as `CURRENT`.
+2. Store the value of the `CURRENT` index in `TEMP`
+	  `TEMP = LIST[CURRENT]`
+3. Iterate through the remaining items in the list to find the lowest value and store the index of that item as `LOWEST_IDX`
+4. If the current item does NOT have the lowest value of the remaining items then swap values
+	1. Move the value of the item at `LOWEST_IDX` to the item at `CURRENT` 
+      `LIST[CURRENT] = LIST[LOWEST_IDX]`
+	2. Move the value `TEMP` to the item at `LOWEST_IDX`
+      `LIST[LOWEST_IDX] = TEMP`
 
 ### Pseudocode
 ```
-input LIST
 for CURRENT from 0 to length(LIST) do
 	TEMP <- LIST[CURRENT]
 	LOWEST_IDX <- CURRENT
@@ -51,24 +51,25 @@ for CURRENT from 0 to length(LIST) do
 		    LOWEST_IDX <- SEARCH
 	    endif
     endfor
-    LIST[CURRENT] <- LIST[LOWEST_IDX]
-    LIST[LOWEST_IDX] <- TEMP
+    if LOWEST_IDX != CURRENT then
+	    LIST[CURRENT] <- LIST[LOWEST_IDX]
+	    LIST[LOWEST_IDX] <- TEMP
+	endif
 endfor
-return LIST
 ```
 
 ### Implementation Example (Python)
 ```python
-def selection_sort(l):
-    for c in range(len(l)):
-        tmp = l[c]
+def selection_sort():
+    for c in range(len(LIST)):
+        tmp = LIST[c]
         lowest_idx = c
-        for s in range(c, len(l)):
-            if l[s] < l[lowest_idx]:
+        for s in range(c, len(LIST)):
+            if LIST[s] < LIST[lowest_idx]:
                 lowest_idx = s
-        l[c] = l[lowest_idx]
-        l[lowest_idx] = tmp
-    return l
+        if lowest_idx != c:
+	        LIST[c] = LIST[lowest_idx]
+	        LIST[lowest_idx] = tmp
 ```
 
 <div style="page-break-after: always;"></div>
@@ -91,20 +92,22 @@ A --> D
 void function(int n[]) {                    // T(n)
 	int i, j, tmp, lowest_idx;              // 4
 	for (i = 0, i < sizeof(n), i++) {       // n + 1
-		tmp = n[i]                          // n
-		lowest_idx = i                      // n
+		tmp = n[i];                         // n
+		lowest_idx = i;                     // n
 		for (j = i, j < sizeof(n), j++)     // n * (n + 1)
-			if n[j] < n[lowest_idx]         // n * n
-				lowest_idx = j              // n * n
-		l[i] = l[lowest_idx]                // n
-		l[lowest_idx] = tmp                 // n
+			if (n[j] < n[lowest_idx])       // n * n
+				lowest_idx = j;             // n * n
+		if (lowest_idx != i) {              // n
+			l[i] = l[lowest_idx];           // n
+			l[lowest_idx] = tmp;            // n
+		}
 	}
 }
 ```
 
-$T(n) = 4 + (n + 1) + n + n + (n * (n + 1)) + n^2 + n^2 + n + n$
+$T(n) = 4 + (n + 1) + n + n + (n * (n + 1)) + n^2 + n^2 + n + n + n$
 
-$T(n) = 3n^2 + 6n + 5$
+$T(n) = 3n^2 + 7n + 5$
 
 #### Asymptotic Analysis Rule #1
 (keeping only term with highest degree)
@@ -121,15 +124,29 @@ $T(n) = n^2$
 #### Worst Case
 The worst case for time complexity for this algorithm is when **the list is sorted, but in reverse order**.  This will require moving every element.  However, no matter if all the elements are moved or none of them are moved, the time complexity is $O(n^2)$ because of comparison operations.
 
-See [Big O](#Big%20O)
+$T(n) = 4 + (n + 1) + n + n + (n * (n + 1)) + n^2 + n^2 + n + n + n$
+$T(n) = 3n^2 + 7n + 5$
+$T(n) = 3n^2$
+$T(n) = n^2$
+
+See [Big O](#Big%20O) Below
 
 #### Best Case
 The best case for Time Complexity for this algorithm is when **the list is already sorted**.
 This will not require moving any elements.  However the time complexity is still $O(n^2)$ because of comparison operations.
+$T(n) = 4 + (n + 1) + n + n + (n * (n + 1)) + n^2 + n^2 + n$
+$T(n) = 3n^2 + 5n + 5$
+$T(n) = 3n^2$
+$T(n) = n^2$
 
 See [Big Omega](#Big%20Omega)
 #### Average Case
-The average case for Time Complexity for this algorithm is when **the list is unsorted**.  The time complexity will always be $O(n^2)$ because of the comparison operations.
+The average case for Time Complexity for this algorithm is when **the list is unsorted in such a way that half of items must move**.  The time complexity will always be $O(n^2)$ because of the comparison operations.
+
+$T(n) = 4 + (n + 1) + n + n + (n * (n + 1)) + n^2 + n^2 + n + \frac{n}{2} + \frac{n}{2}$
+$T(n) = 3n^2 + 6n + 5$
+$T(n) = 3n^2$
+$T(n) = n^2$
 
 See [Big Theta](#Big%20Theta)
 <div style="page-break-after: always;"></div>
@@ -168,7 +185,7 @@ $C_1 \cdot g(n) <= n^2 <= C_2 \cdot g(n)$
 
 $n^2 <= n^2 <= n^2 \quad \forall n >= 1$ where $C_1 = 1, C_2 = 1$ and $g(n) = n^2$
 
-Based on the definition $n^2 = \Theta(n)$
+Based on the definition $n^2 = \Theta(n^2)$
 
 ### Conclusion
 
