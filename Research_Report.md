@@ -184,9 +184,9 @@ The average case for Time Complexity for this algorithm is when **the list is un
 
 $T(n) = 4 + (n + 1) + n + n + (n * (n + 1)) + n^2 + \frac{n^2}{2} + n + \frac{n}{2} + \frac{n}{2}$
 
-$T(n) = \frac{7n^2}{2} + 6n + 5$
+$T(n) = \frac{5n^2}{2} + 6n + 5$
 
-$T(n) = \frac{7n^2}{2}$
+$T(n) = \frac{5n^2}{2}$
 
 $T(n) = n^2$
 
