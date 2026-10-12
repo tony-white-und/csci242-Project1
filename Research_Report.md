@@ -45,7 +45,7 @@ To illustrate the unique value of Selection Sort when compared to other sorting 
 ### <ins>Selection Sort</ins>
 
 1. Iterate through the list `LIST` while storing the current item index as `CURRENT_IDX`.
-2. Starting at the current item, Iterate through the remaining items in the list to find the lowest value and store the index of that item as `LOWEST_IDX`
+2. Starting at the current item, iterate through the remaining items in the list to find the lowest value and store the index of that item as `LOWEST_IDX`
 3. If the value stored in the current item does NOT have the lowest value of all the remaining items, then swap the values stored in the current item with the value stored at `LOWEST_IDX`.
     1. Copy the value of the list item stored at `CURRENT_IDX` index to `TEMP`.
         
