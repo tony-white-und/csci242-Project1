@@ -246,7 +246,7 @@ $2n^2 + 4n + 5 <= \frac{5n^2}{2} + \frac{11n}{2} + 5 <= 3n^2 + 7n + 5$
 
 $2n^2 <= \frac{5n^2}{2} <= 3n^2$
 
-$\frac{2n^2}{5} <= n^2 <= \frac{6n^2}{5} \quad \forall n >= 1$ where $C_1 = \frac{2}{5}, C_2 = \frac{6}{5}$ and $g(n) = n^2$
+$\frac{4n^2}{5} <= n^2 <= \frac{6n^2}{5} \quad \forall n >= 1$ where $C_1 = \frac{4}{5}, C_2 = \frac{6}{5}$ and $g(n) = n^2$
 
 From the definition: $\Theta(n^2)$
 
