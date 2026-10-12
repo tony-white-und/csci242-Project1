@@ -44,37 +44,37 @@ To illustrate the unique value of Selection Sort when compared to other sorting 
 
 ### <ins>Selection Sort</ins>
 
-1. Iterate through the list `LIST` while storing the current item index as `CURRENT`.
+1. Iterate through the list `LIST` while storing the current item index as `CURRENT_IDX`.
 
-2. Copy the value of the list item stored at `CURRENT` index to `TEMP`.
+2. Copy the value of the list item stored at `CURRENT_IDX` index to `TEMP`.
    
-      `TEMP = LIST[CURRENT]`
+      `TEMP = LIST[CURRENT_IDX]`
 
-2. Starting at the current item, Iterate through the remaining items in the list to find the lowest value and store the index of that item as `LOWEST_IDX`
+3. Starting at the current item, Iterate through the remaining items in the list to find the lowest value and store the index of that item as `LOWEST_IDX`
 
-3. If the value stored in the current item does NOT have the lowest value of all the remaining items, then swap the values stored in the current item with the value stored at `LOWEST_IDX`.
+4. If the value stored in the current item does NOT have the lowest value of all the remaining items, then swap the values stored in the current item with the value stored at `LOWEST_IDX`.
    
-   4. Copy the value of the item at `LOWEST_IDX` to the item at `CURRENT` 
+   5. Copy the value of the item at `LOWEST_IDX` to the item at `CURRENT` 
       
-       `LIST[CURRENT] = LIST[LOWEST_IDX]`
+       `LIST[CURRENT_IDX] = LIST[LOWEST_IDX]`
    
-   5. Copy the value stored in `TEMP` to the item at `LOWEST_IDX`
+   6. Copy the value stored in `TEMP` to the item at `LOWEST_IDX`
       
        `LIST[LOWEST_IDX] = TEMP`
 
 ### Pseudocode
 
 ```
-for CURRENT from 0 to length(LIST) do
-    TEMP <- LIST[CURRENT]
-    LOWEST_IDX <- CURRENT
-    for SEARCH from CURRENT to length(LIST) do
-        if LIST[SEARCH] < LIST[LOWEST_IDX] then
-            LOWEST_IDX <- SEARCH
+for CURRENT_IDX from 0 to length(LIST) do
+    TEMP <- LIST[CURRENT_IDX]
+    LOWEST_IDX <- CURRENT_IDX
+    for SEARCH_IDX from CURRENT_IDX to length(LIST) do
+        if LIST[SEARCH_IDX] < LIST[LOWEST_IDX] then
+            LOWEST_IDX <- SEARCH_IDX
         endif
     endfor
-    if LOWEST_IDX != CURRENT then
-        LIST[CURRENT] <- LIST[LOWEST_IDX]
+    if LOWEST_IDX != CURRENT_IDX then
+        LIST[CURRENT_IDX] <- LIST[LOWEST_IDX]
         LIST[LOWEST_IDX] <- TEMP
     endif
 endfor
