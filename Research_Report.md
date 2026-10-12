@@ -48,10 +48,13 @@ To illustrate the unique value of Selection Sort when compared to other sorting 
 2. Starting at the current item, Iterate through the remaining items in the list to find the lowest value and store the index of that item as `LOWEST_IDX`
 3. If the value stored in the current item does NOT have the lowest value of all the remaining items, then swap the values stored in the current item with the value stored at `LOWEST_IDX`.
     1. Copy the value of the list item stored at `CURRENT_IDX` index to `TEMP`.
+        
         `TEMP = LIST[CURRENT_IDX]`
-    2. Copy the value of the item at `LOWEST_IDX` to the item at `CURRENT`
+    1. Copy the value of the item at `LOWEST_IDX` to the item at `CURRENT`
+        
         `LIST[CURRENT_IDX] = LIST[LOWEST_IDX]`
-	3. Copy the value stored in `TEMP` to the item at `LOWEST_IDX`
+	1. Copy the value stored in `TEMP` to the item at `LOWEST_IDX`
+        
         `LIST[LOWEST_IDX] = TEMP`
 
 ### Pseudocode
