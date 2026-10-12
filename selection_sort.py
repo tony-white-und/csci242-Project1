@@ -1,11 +1,11 @@
 def selection_sort(l):
     for c in range(len(l)):
-        tmp = l[c]
         lowest_idx = c 
         for s in range(c, len(l)):
             if l[s] < l[lowest_idx]:
                 lowest_idx = s
         if lowest_idx != c:
+            tmp = l[c]
             l[c] = l[lowest_idx]
             l[lowest_idx] = tmp
     return l
