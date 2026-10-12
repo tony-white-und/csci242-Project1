@@ -209,7 +209,12 @@ Worst Case: Reverse Sorted List
 > The function $f(n) = O(g(n)) \iff \exists$ two Constants $C$ and $k$ such that:
 >  $\quad f(n) <= C \cdot g(n) \quad \forall n >= k$
 
+$3n^2 + 7n + 5 <= C \cdot g(n) \quad \forall n >= 1$
+
+$3n^2 <= C \cdot g(n) \quad \forall n >= 1$
+
 $n^2 <= C \cdot g(n) \quad \forall n >= 1$
+
 $n^2 <= n^2$ where $C$ =1 and $g(n) = n^2$
 
 From the definition: $O(n^2)$
@@ -222,7 +227,12 @@ Best Case: Sorted List
 > The function $f(n) = \Omega(g(n)) \iff \exists$ two Constants $C$ and $k$ such that:
 >  $\quad f(n) >= C \cdot g(n) \quad \forall n >= k$
 
+$2n^2 + 5n + 5 >= C \cdot g(n) \quad \forall n >= 1$
+
+$2n^2 >= C \cdot g(n) \quad \forall n >= 1$
+
 $n^2 >= C \cdot g(n) \quad \forall n >= 1$
+
 $n^2 >= n^2$ where $C$ =1 and $g(n) = n^2$
 
 From the definition: $\Omega(n^2)$
@@ -235,7 +245,11 @@ Average Case: Unsorted List
 > The function $f(n) = \Theta(g(n)) \iff \exists$  three Constants $C_1$, $C_2$, and $k$ such that:
 >  $\quad C_1 \cdot g(n) <= f(n) <= C_2 \cdot g(n) \quad \forall n >= k$
 
-$C_1 \cdot g(n) <= n^2 <= C_2 \cdot g(n)$
+$C_1 \cdot g(n) <= \frac{5n^2}{2} + 6n + 5 <= C_2 \cdot g(n)$
+
+$2n^2 + 5n + 5 <= \frac{5n^2}{2} + 6n + 5 <= 3n^2 + 7n + 5$
+
+$2n^2 <= \frac{5n^2}{2} <= 3n^2$
 
 $n^2 <= n^2 <= n^2 \quad \forall n >= 1$ where $C_1 = 1, C_2 = 1$ and $g(n) = n^2$
 
