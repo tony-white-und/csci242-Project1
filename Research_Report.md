@@ -61,17 +61,17 @@ To illustrate the unique value of Selection Sort when compared to other sorting 
 
 ```
 for CURRENT_IDX from 0 to length(LIST) do
-    LOWEST_IDX <- CURRENT_IDX
-    for SEARCH_IDX from CURRENT_IDX to length(LIST) do
-        if LIST[SEARCH_IDX] < LIST[LOWEST_IDX] then
-            LOWEST_IDX <- SEARCH_IDX
-        endif
-    endfor
+	LOWEST_IDX <- CURRENT_IDX
+	for SEARCH_IDX from CURRENT_IDX to length(LIST) do
+		if LIST[SEARCH_IDX] < LIST[LOWEST_IDX] then
+			LOWEST_IDX <- SEARCH_IDX
+		endif
+	endfor
     if LOWEST_IDX != CURRENT_IDX then
 		TEMP <- LIST[CURRENT_IDX]
-        LIST[CURRENT_IDX] <- LIST[LOWEST_IDX]
-        LIST[LOWEST_IDX] <- TEMP
-    endif
+		LIST[CURRENT_IDX] <- LIST[LOWEST_IDX]
+		LIST[LOWEST_IDX] <- TEMP
+	endif
 endfor
 ```
 
