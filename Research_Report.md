@@ -86,8 +86,8 @@ def selection_sort():
                 lowest_idx = s
         if lowest_idx != c:
 	        tmp = LIST[c]
-            LIST[c] = LIST[lowest_idx]
-            LIST[lowest_idx] = tmp
+			LIST[c] = LIST[lowest_idx]
+			LIST[lowest_idx] = tmp
 ```
 
 <div style="page-break-after: always;"></div>
