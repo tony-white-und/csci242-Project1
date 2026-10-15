@@ -67,7 +67,7 @@ for CURRENT_IDX from 0 to length(LIST) do
 			LOWEST_IDX <- SEARCH_IDX
 		endif
 	endfor
-    if LOWEST_IDX != CURRENT_IDX then
+	if LOWEST_IDX != CURRENT_IDX then
 		TEMP <- LIST[CURRENT_IDX]
 		LIST[CURRENT_IDX] <- LIST[LOWEST_IDX]
 		LIST[LOWEST_IDX] <- TEMP
