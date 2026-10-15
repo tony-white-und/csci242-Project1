@@ -61,17 +61,17 @@ To illustrate the unique value of Selection Sort when compared to other sorting 
 
 ```
 for CURRENT_IDX from 0 to length(LIST) do
-	LOWEST_IDX <- CURRENT_IDX
-	for SEARCH_IDX from CURRENT_IDX to length(LIST) do
-		if LIST[SEARCH_IDX] < LIST[LOWEST_IDX] then
-			LOWEST_IDX <- SEARCH_IDX
-		endif
-	endfor
-	if LOWEST_IDX != CURRENT_IDX then
-		TEMP <- LIST[CURRENT_IDX]
-		LIST[CURRENT_IDX] <- LIST[LOWEST_IDX]
-		LIST[LOWEST_IDX] <- TEMP
-	endif
+    LOWEST_IDX <- CURRENT_IDX
+    for SEARCH_IDX from CURRENT_IDX to length(LIST) do
+        if LIST[SEARCH_IDX] < LIST[LOWEST_IDX] then
+            LOWEST_IDX <- SEARCH_IDX
+        endif
+    endfor
+    if LOWEST_IDX != CURRENT_IDX then
+        TEMP <- LIST[CURRENT_IDX]
+        LIST[CURRENT_IDX] <- LIST[LOWEST_IDX]
+        LIST[LOWEST_IDX] <- TEMP
+    endif
 endfor
 ```
 
@@ -85,9 +85,9 @@ def selection_sort():
             if LIST[s] < LIST[lowest_idx]:
                 lowest_idx = s
         if lowest_idx != c:
-	        tmp = LIST[c]
-			LIST[c] = LIST[lowest_idx]
-			LIST[lowest_idx] = tmp
+            tmp = LIST[c]
+            LIST[c] = LIST[lowest_idx]
+            LIST[lowest_idx] = tmp
 ```
 
 <div style="page-break-after: always;"></div>
