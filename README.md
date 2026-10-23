@@ -36,7 +36,9 @@ This Markdown file will be exported to PDF using Obsidian or Marktext:
 
 ## 2. Powerpoint Presentation
 
-This Markdown file is just an outline of the presentation slide deck.  It could be exported as a .pptx file from Obidian, but is intended as a baseline document only.
+A Powerpoint Presenation has been created in Google Slides https://docs.google.com/presentation/d/1gBrOlkO99_y1-i76f0sFo2vmqprSG2MDdqNr3kkWGKw/edit?usp=sharing
 
-[Presentation.md](Presentation.md)
+This has been exported to [Selection Sort Presentation.pptx](Selection Sort Presentation.pptx)
+
+This has been exported to [h
 
