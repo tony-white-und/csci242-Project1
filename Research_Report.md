@@ -47,7 +47,8 @@ Both algorithms have the same Worst Case $O(n^2)$ and Average Case $\Theta(n^2)$
 
 In terms of Worst Case specifically for Swap operations, Selection Sort is the clear winner.  Not many sorting algorithms have Worst Case time complexity as low as Selection Sort at $O(n)$.  Insertion Sort is the near polar-opposite with a Worst case time complexity for swaps at $O(n^2)$.
 
-In terms of **Stability**, these two algorithms are also very different.  Insertion sort is a **Stable** meaning that list elements with equal compared values retain their original position after sorting.  In reference to the earlier playing card analogy,   This would mean that given a hand that contained three Jacks, the suit of those cards would remain in the original order after the sorting process.
+In terms of being **Stable**, these two algorithms are also very different.  Insertion sort is a **Stable** sorting algorithm, meaning that list elements with equal compared values retain their original position after sorting.  In reference to the earlier playing card analogy, this would mean that if given a hand containing three Jacks, the suits of those cards would remain in the original order after the sorting process.
+
 <div style="page-break-after: always;"></div>
 
 ## Algorithm
@@ -244,7 +245,7 @@ From the definition: $\Omega(n^2)$
 
 #### Big Theta
 
-Average Case: Unsorted List
+Average Case: The list is unsorted in such a way that half of items must move.
 
 > [!TIP]
 > The function $f(n) = \Theta(g(n)) \iff \exists$  three Constants $C_1$, $C_2$, and $k$ such that:
