@@ -29,7 +29,7 @@ By comparing Selection Sort to some other in-place sorting algorithms, we can cl
 | Selection Sort | $n^2$       | $n^2$        | $n^2$        | $n$                 | No     |
 | Heap Sort      | $nlogn$[^1] | $nlogn$      | $n log n$    | $nlogn$[^2]         | No     |
 
- Heap Sort is an in-place sorting algorithm invented in 1964[^1] by John William Joseph (Bill) Williams.  It has a distinct advantage over Selection Sort in that even its Worst Case time complexity is $O(nlogn)$^[1].   Because Heap Sort uses the concept of a Binary Heap data structure, not every item in the list needs to be blindly looked at for each iteration.  This comparison strategy eliminates many of the iterations though the list that Selection Sort must complete in order to sort the list.
+ Heap Sort is an in-place sorting algorithm invented in 1964[^1] by John William Joseph (Bill) Williams.  It has a distinct advantage over Selection Sort in that even its Worst Case time complexity is $O(nlogn)$.[^1]   Because Heap Sort uses the concept of a Binary Heap data structure, not every item in the list needs to be blindly looked at for each iteration.  This comparison strategy eliminates many of the iterations though the list that Selection Sort must complete in order to sort the list.
 
 Although Heap Sort's Worst Case (Big $O$) (specifically for Swaps) stays in line with its overall time complexity of $O(nlogn)$, Selection Sort does have a clear advantage in this category.  Since Selection Sort can never move (a.k.a swap) any element more than 1 time during the sorting process $O(n)$, it may still be the better choice when memory write operations are a the primary bottleneck in the system.
 
