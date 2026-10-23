@@ -266,7 +266,7 @@ From the definition: $\Theta(n^2)$
 
 [^1]: Williams, J. W. J. (1964). "Algorithm 232 - Heapsort". *Communications of the ACM*. **7** (6): 347–348. doi:10.1145/512274.512284.
 
-[^2]: Cormen, T. H., Leiserson, C. E., Rivest, R. L., & Stein, C. (2022). *Introduction to Algorithms* (4th ed.). MIT Press. Chapter 6 (Heapsort) outlines that the `MAX-HEAPIFY` procedure takes $O(\log n)$ time per element, which directly bounds both comparisons and exchanges (swaps) to a total of $O(n log n)$ during the sorting phase.
+[^2]: Cormen, T. H., Leiserson, C. E., Rivest, R. L., & Stein, C. (2022). *Introduction to Algorithms* (4th ed.). MIT Press. Chapter 6 (Heapsort) outlines that the `MAX-HEAPIFY` procedure takes $O(log n)$ time per element, which directly bounds both comparisons and exchanges (swaps) to a total of $O(n log n)$ during the sorting phase.
 
 [^3]: Cormen, T. H., Leiserson, C. E., Rivest, R. L., & Stein, C. S. (2022). "Getting Started." In *Introduction to Algorithms* (4th ed., Chap. 2). MIT Press.
 
