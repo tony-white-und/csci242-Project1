@@ -40,6 +40,7 @@ Neither Selection Sort nor Heap Sort are **Stable** sorting algorithms.  This me
 | -------------- | ------- | ------------ | ------------ | ------------------- | ------- |
 | Selection Sort | $n^2$   | $n^2$        | $n^2$        | $n$                 | No      |
 | Insertion Sort | $n^2$   | $n^2$        | $n$[^3]      | $n^2$               | Yes[^4] |
+
 Insertion Sort's history is similar to Selection Sort in that they both pre-date modern computing.  Like Selection Sort, Insertion Sort is a very simple algorithm.  It can be described as similar to the act of sorting a hand of playing cards by inserting one card at a time into your sorted set of cards until all the cards are part of the sorted set of cards.  
 
 Both algorithms have the same Worst Case $O(n^2)$ and Average Case $\Theta(n^2)$, but where Insertion Sort has the advantage is the Best Case time complexity.  If the list is already sorted, time complexity is only $\Omega(n)$.
