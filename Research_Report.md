@@ -21,23 +21,31 @@ While not often used as a general purpose sorting algorithm in modern computing 
 
 ## Comparison to Other Sorting Algorithms
 
-To illustrate the unique value of Selection Sort when compared to other sorting algorithms, we must look at the Worst Case Time Complexity **specifically for Swap Operations**:
+By comparing Selection Sort to some other in-place sorting algorithms, we can clearly see  some important differences.  
+### Comparison to Heap Sort
 
-| Sorting Algorithm     | Worst Case (For Swap Operations) |
-| --------------------- | -------------------------------- |
-| Selection Sort        | $O(n)$                           |
-| Bubble Sort           | $O(n^2)$                         |
-| Recursive Bubble Sort | $O(n^2)$                         |
-| Quicksort             | $O(nlogn)$                       |
-| Insertion Sort        | $O(n^2)$                         |
-| Bucket Sort           | N/A - not an in-place sort       |
-| Radix Sort            | N/A - not an in-place sort       |
-| Count Sort            | N/A - not an in-place sort       |
-| Heap Sort             | $O(nlogn)$                       |
-| Tree Sort             | N/A - not an in-place sort       |
-| Shell Sort            | $O(n^2)$                         |
-| TimSort               | N/A - not an in-place sort       |
+| Algorithm      | Big $O$     | Big $\Theta$ | Big $\Omega$ | Big $O$ (For Swaps) | Stable |
+| -------------- | ----------- | ------------ | ------------ | ------------------- | ------ |
+| Selection Sort | $n^2$       | $n^2$        | $n^2$        | $n$                 | No     |
+| Heap Sort      | $nlogn$[^1] | $nlogn$      | $n log n$    | $nlogn$[^2]         | No     |
+ Heap Sort is an in-place sorting algorithm invented in 1964[^1] by John William Joseph (Bill) Williams.  It has a distinct advantage over Selection Sort in that even its Worst Case time complexity is $O(nlogn)$^[1].   Because Heap Sort uses the concept of a Binary Heap data structure, not every item in the list needs to be blindly looked at for each iteration.  This comparison strategy eliminates many of the iterations though the list that Selection Sort must complete in order to sort the list.
 
+Although Heap Sort's Worst Case (Big $O$) (specifically for Swaps) stays in line with its overall time complexity of $O(nlogn)$, Selection Sort does have a clear advantage in this category.  Since Selection Sort can never move (a.k.a swap) any element more than 1 time during the sorting process $O(n)$, it may still be the better choice when memory write operations are a the primary bottleneck in the system.
+
+Neither Selection Sort nor Heap Sort are **Stable** sorting algorithms.  This means that if the items to be sorted have equal values, there is no guarantee that the specific elements with the same value will retain their original order in the list.
+
+### Comparison to Insertion Sort
+| Algorithm      | Big $O$ | Big $\Theta$ | Big $\Omega$ | Big $O$ (For Swaps) | Stable  |
+| -------------- | ------- | ------------ | ------------ | ------------------- | ------- |
+| Selection Sort | $n^2$   | $n^2$        | $n^2$        | $n$                 | No      |
+| Insertion Sort | $n^2$   | $n^2$        | $n$[^3]      | $n^2$               | Yes[^4] |
+Insertion Sort's history is similar to Selection Sort in that they both pre-date modern computing.  Like Selection Sort, Insertion Sort is a very simple algorithm.  It can be described as similar to the act of sorting a hand of playing cards by inserting one card at a time into your sorted set of cards until all the cards are part of the sorted set of cards.  
+
+Both algorithms have the same Worst Case $O(n^2)$ and Average Case $\Theta(n^2)$, but where Insertion Sort has the advantage is the Best Case time complexity.  If the list is already sorted, time complexity is only $\Omega(n)$.
+
+In terms of Worst Case specifically for Swap operations, Selection Sort is the clear winner.  Not many sorting algorithms have Worst Case time complexity as low as Selection Sort at $O(n)$.  Insertion Sort is the near polar-opposite with a Worst case time complexity for swaps at $O(n^2)$.
+
+In terms of **Stability**, these two algorithms are also very different.  Insertion sort is a **Stable** meaning that list elements with equal compared values retain their original position after sorting.  In reference to the earlier playing card analogy,   This would mean that given a hand that contained three Jacks, the suit of those cards would remain in the original order after the sorting process.
 <div style="page-break-after: always;"></div>
 
 ## Algorithm
@@ -252,4 +260,12 @@ From the definition: $\Theta(n^2)$
 
 ### Conclusion
 
-The Selection Sort Algorithm has an *exact bound* since $\Omega(n^2)$, $\Theta(n^2)$, and $O(n^2)$.  Therefore, the time complexity is **quadratic** by definition.
+
+
+[^1]: Williams, J. W. J. (1964). "Algorithm 232 - Heapsort". *Communications of the ACM*. **7** (6): 347–348. doi:10.1145/512274.512284.
+
+[^2]: Cormen, T. H., Leiserson, C. E., Rivest, R. L., & Stein, C. (2022). *Introduction to Algorithms* (4th ed.). MIT Press. Chapter 6 (Heapsort) outlines that the `MAX-HEAPIFY` procedure takes $O(\log n)$ time per element, which directly bounds both comparisons and exchanges (swaps) to a total of $O(n log n)$ during the sorting phase.
+
+[^3]: Cormen, T. H., Leiserson, C. E., Rivest, R. L., & Stein, C. S. (2022). "Getting Started." In *Introduction to Algorithms* (4th ed., Chap. 2). MIT Press.
+
+[^4]: Knuth, D. E. (1998). *The Art of Computer Programming: Volume 3: Sorting and Searching* (2nd ed.). Addison-Wesley Professional.
