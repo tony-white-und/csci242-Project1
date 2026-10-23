@@ -39,5 +39,3 @@ This Markdown file will be exported to PDF using Obsidian or Marktext:
 A Powerpoint Presenation has been created in Google Slides https://docs.google.com/presentation/d/1gBrOlkO99_y1-i76f0sFo2vmqprSG2MDdqNr3kkWGKw/edit?usp=sharing
 
 This has been exported to [Selection Sort Presentation.pptx](Selection%20Sort%20Presentation.pptx)
-This has been exported to [
-
