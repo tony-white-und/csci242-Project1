@@ -10,7 +10,7 @@ date: 2026-10-23
 
 ## Executive Summary
 
-Selection Sort is a very simple in-place sorting algorithm.   When compared with more modern sorting algorithms, it is seldom the ideal choice, especially for large datasets.  However, where Selection Sort shines is its minimal swap operations and its consistent requirements in terms of comparison operations.
+Selection Sort is a very simple in-place sorting algorithm.   When compared with more modern sorting algorithms, it is seldom the ideal choice.   However, where Selection Sort shines is its minimal  number of required swap operations and its consistent number of comparison operations.
 
 ## History
 
