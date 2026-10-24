@@ -1,15 +1,16 @@
----
-course: CSCI242 Fall 2026
-authors: Tony White, Blake Wiemken
-team: FirstTeam
-algorithm: Selection Sort
----
+
 
 # Selection Sort Research Report
 
+CSCI242 Fall 2026
+authors: Tony White, Blake Wiemken
+team: FirstTeam
+algorithm: Selection Sort
+date: 2026-10-23
+
 ## Executive Summary
 
-*more to come*
+Selection Sort is a very simple in-place sorting algorithm.   When compared with more modern sorting algorithms, it is seldom the ideal choice, especially for large datasets.  However, where Selection Sort shines is its minimal swap operations and its consistent requirements in terms of comparison operations.
 
 ## History
 
@@ -22,6 +23,8 @@ While not often used as a general purpose sorting algorithm in modern computing 
 ## Comparison to Other Sorting Algorithms
 
 By comparing Selection Sort to some other in-place sorting algorithms, we can clearly see  some important differences.  
+
+
 ### Comparison to Heap Sort
 
 | Algorithm      | Big $O$     | Big $\Theta$ | Big $\Omega$ | Big $O$ (For Swaps) | Stable |
@@ -34,6 +37,8 @@ By comparing Selection Sort to some other in-place sorting algorithms, we can cl
 Although Heap Sort's Worst Case (Big $O$) (specifically for Swaps) stays in line with its overall time complexity of $O(nlogn)$, Selection Sort does have a clear advantage in this category.  Since Selection Sort can never move (a.k.a swap) any element more than 1 time during the sorting process $O(n)$, it may still be the better choice when memory write operations are a the primary bottleneck in the system.
 
 Neither Selection Sort nor Heap Sort are **Stable** sorting algorithms.  This means that if the items to be sorted have equal values, there is no guarantee that the specific elements with the same value will retain their original order in the list.
+
+<div style="page-break-after: always;"></div>
 
 ### Comparison to Insertion Sort
 | Algorithm      | Big $O$ | Big $\Theta$ | Big $\Omega$ | Big $O$ (For Swaps) | Stable  |
@@ -48,8 +53,6 @@ Both algorithms have the same Worst Case $O(n^2)$ and Average Case $\Theta(n^2)$
 In terms of Worst Case specifically for Swap operations, Selection Sort is the clear winner.  Not many sorting algorithms have Worst Case time complexity as low as Selection Sort at $O(n)$.  Insertion Sort is the near polar-opposite with a Worst case time complexity for swaps at $O(n^2)$.
 
 In terms of being **Stable**, these two algorithms are also very different.  Insertion sort is a **Stable** sorting algorithm, meaning that list elements with equal compared values retain their original position after sorting.  In reference to the earlier playing card analogy, this would mean that if given a hand containing three Jacks, the suits of those cards would remain in the original order after the sorting process.
-
-<div style="page-break-after: always;"></div>
 
 ## Algorithm
 
@@ -101,7 +104,7 @@ def selection_sort():
             LIST[lowest_idx] = tmp
 ```
 
-<div style="page-break-after: always;"></div>
+
 
 ## Asymptotic Analysis
 
@@ -198,7 +201,6 @@ $T(n) = n^2$
 
 See [Big Theta](#Big%20Theta)
 
-<div style="page-break-after: always;"></div>
 
 ### Asymptotic Notations
 
@@ -206,6 +208,8 @@ Time Complexity Key:
 
 > [!NOTE]
 > $1 <logn < \sqrt{n} < n < \dots < n^2 < n^3 < \dots < 2^n < 3^n < \dots < n^n$
+
+<div style="page-break-after: always;"></div>
 
 #### Big O
 
@@ -263,7 +267,7 @@ From the definition: $\Theta(n^2)$
 
 ### Conclusion
 
-
+With an exact bound of **quadratic time** time-complexity, Selection Sort is not often the first choice for a Sorting Algorithm in modern computing.  However, it still has very specific characteristics such as its static comparison and swap operations which keep it relevant.   Finally, the simplistic nature of the algorithm make it easy to understand and use.
 
 [^1]: Williams, J. W. J. (1964). "Algorithm 232 - Heapsort". *Communications of the ACM*. **7** (6): 347–348. doi:10.1145/512274.512284.
 
