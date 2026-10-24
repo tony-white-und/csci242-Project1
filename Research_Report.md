@@ -273,6 +273,6 @@ With an exact bound of **quadratic time** time-complexity, Selection Sort is not
 
 [^2]: Cormen, T. H., Leiserson, C. E., Rivest, R. L., & Stein, C. (2022). *Introduction to Algorithms* (4th ed.). MIT Press. Chapter 6 (Heapsort) outlines that the `MAX-HEAPIFY` procedure takes $O(log n)$ time per element, which directly bounds both comparisons and exchanges (swaps) to a total of $O(n log n)$ during the sorting phase.
 
-[^3]: Cormen, T. H., Leiserson, C. E., Rivest, R. L., & Stein, C. S. (2022). "Getting Started." In *Introduction to Algorithms* (4th ed., Chap. 2). MIT Press.
+[^3]: Cormen, T. H., Leiserson, C. E., Rivest, R. L., & Stein, C. (2022). *Introduction to Algorithms* (4th ed.). MIT Press. Chapter 2 (Getting Started)
 
 [^4]: Knuth, D. E. (1998). *The Art of Computer Programming: Volume 3: Sorting and Searching* (2nd ed.). Addison-Wesley Professional.
